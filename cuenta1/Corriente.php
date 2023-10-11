@@ -1,5 +1,5 @@
 <?php
-require("Cuenta.php");
+include('Cuenta.php');
 
 class Corriente extends Cuenta {
     private $numero_chequera;

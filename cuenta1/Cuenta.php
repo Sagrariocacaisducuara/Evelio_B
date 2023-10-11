@@ -25,7 +25,7 @@ class Cuenta {
     }
 
 }
-$miCuenta = new cuenta("12345", 22.000, 30000);
+$miCuenta = new Cuenta("12345", 22.000, 30000);
 
 echo "El numero de cuenta es:  " . $miCuenta->getNumCuenta() . "<br>";
 echo "El saldo en pesos es de:  " . $miCuenta->getSaldoPesos() . "<br>";

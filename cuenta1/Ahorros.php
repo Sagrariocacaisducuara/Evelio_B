@@ -1,5 +1,5 @@
 <?php
-require('Cuenta.php');
+include('Cuenta.php');
 
 class Ahorros extends Cuenta {
     private $sucursal_apertura;
