@@ -157,53 +157,32 @@ class Producto {
 
     // getters y setters 
 }
-
-//  uso:
-$ficha1 = new Ficha();
-$ficha1->setCodigoFicha("2560664B");
-
-
 $ficha2 = new Ficha();
-$ficha2->setCodigoFicha("2560664A");
+$ficha2->setCodigoFicha("2560664C");  
+
+$programa2 = new Programa();
+$programa2->setCodigoPrograma("12345");
+$programa2->setNombrePrograma("ProgramaXYZ");
 
 
-$aprendiz1 = new Aprendiz();
-$aprendiz1->setIdAprendiz("12");
-$aprendiz1->setNombres("Sagrario");
-$aprendiz1->setApellidos("Ducuara");
-$aprendiz1->setCorreo("sagrariocacaris2004@gmail.com");
+$aprendiz3 = new Aprendiz();
+$aprendiz3->setIdAprendiz("3");
+$aprendiz3->setNombres("Laura");
+$aprendiz3->setApellidos("Gonzalez");
+$aprendiz3->setCorreo("laura@gmail.com");
 
-$aprendiz2 = new Aprendiz();
-$aprendiz2->setIdAprendiz("2");
-$aprendiz2->setNombres("Cesar");
-$aprendiz2->setApellidos("Martinez");
-$aprendiz2->setCorreo("cesar.martinez@soy.sena.edu.co");
-
-$ficha1->addAprendiz($aprendiz1);
-$ficha1->addAprendiz($aprendiz2);
-
-$programa1 = new Programa();
-$programa1->setCodigoPrograma("34521");
-$programa1->setNombrePrograma("ADSO");
+$ficha2->addAprendiz($aprendiz3);
 
 
-//+++++++parte cliente pedido++++++++++
+$cliente2 = new Cliente(2, "Ana", "ana@yahoo.com");
+$pedido2 = new Pedido(2, $cliente2);
 
-$cliente1 = new Cliente(1, "Mateo", "mateo@Hotmail.com");
-$pedido1 = new Pedido(1, $cliente1);
-
-Cliente::ContadorPedidos();
-
+$proveedor2 = new Proveedor("tecnológico", "Javier", "Medellín", "javier@example.com", "987654321", "Carrera 7 #34");
+$producto2 = new Producto("smartphone", 249.99, $proveedor2);
 
 
-//++++++proveedor++++++
-$proveedor1 = new Proveedor("juridico", "Luis", "Bogota", "luis@gmail.com", "453634232", "call 55 #2");
-$producto1 = new Producto("computadores", 100.99, $proveedor1);
-
-//++++++++ejecucion+++++++++
-
-echo "<b>"."Ficha: ". "</b>" . $ficha2->getCodigoFicha() . "</br>";
-echo "<b>". "Programa: ". "</b>" . $programa1->getNombrePrograma() . "</br>";
-echo "<b>". "Aprendices en la ficha: ". "</b>" . count($ficha2->getAprendices()) . "</br>";
+echo "<b>"."Ficha 2: ". "</b>" . $ficha2->getCodigoFicha() . "</br>";
+echo "<b>". "Programa 2: ". "</b>" . $programa2->getNombrePrograma() . "</br>";
+echo "<b>". "Aprendices en la ficha 2: ". "</b>" . count($ficha2->getAprendices()) . "</br>";
 echo "<b>". "Número de fichas creadas: ". "</b>" . Ficha::getContador() . "</br>";
-echo "<b>". "Número de pedidos del cliente: ". "</b>" . Cliente::obtenerContadorPedidos() . "</br>";
+echo "<b>". "Número de pedidos del cliente 2: ". "</b>" . Cliente::obtenerContadorPedidos() . "</br>";
