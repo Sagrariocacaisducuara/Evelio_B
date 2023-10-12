@@ -42,7 +42,7 @@ class Aprendiz {
 class Ficha {
     private $codigoFicha;
     private $aprendices = array();
-    private static $contador = 0; // Contador estático
+    private static $contador = 0; 
 
     public function __construct() {
         self::$contador++;
@@ -147,7 +147,7 @@ class Proveedor {
 class Producto {
     private $nombre;
     private $precio;
-    private $proveedor; // Relación con Proveedor
+    private $proveedor;
 
     public function __construct($nombre, $precio, $proveedor) {
         $this->nombre = $nombre;
@@ -169,27 +169,27 @@ $ficha2->setCodigoFicha("2560664A");
 
 $aprendiz1 = new Aprendiz();
 $aprendiz1->setIdAprendiz("12");
-$aprendiz1->setNombres("Ruben");
-$aprendiz1->setApellidos("Lozano");
-$aprendiz1->setCorreo("rlozanotique@gmail.com");
+$aprendiz1->setNombres("Sagrario");
+$aprendiz1->setApellidos("Ducuara");
+$aprendiz1->setCorreo("sagrariocacaris2004@gmail.com");
 
 $aprendiz2 = new Aprendiz();
 $aprendiz2->setIdAprendiz("2");
-$aprendiz2->setNombres("Jimena");
-$aprendiz2->setApellidos("Gutierrez");
-$aprendiz2->setCorreo("jimena.gutierrezz@soy.sena.edu.co");
+$aprendiz2->setNombres("Cesar");
+$aprendiz2->setApellidos("Martinez");
+$aprendiz2->setCorreo("cesar.martinez@soy.sena.edu.co");
 
 $ficha1->addAprendiz($aprendiz1);
 $ficha1->addAprendiz($aprendiz2);
 
 $programa1 = new Programa();
-$programa1->setCodigoPrograma("218120");
+$programa1->setCodigoPrograma("34521");
 $programa1->setNombrePrograma("ADSO");
 
 
 //+++++++parte cliente pedido++++++++++
 
-$cliente1 = new Cliente(1, "Pablo", "Pablo@Hotmail.com");
+$cliente1 = new Cliente(1, "Mateo", "mateo@Hotmail.com");
 $pedido1 = new Pedido(1, $cliente1);
 
 Cliente::ContadorPedidos();
@@ -197,7 +197,7 @@ Cliente::ContadorPedidos();
 
 
 //++++++proveedor++++++
-$proveedor1 = new Proveedor("juridico", "lucas", "bogota", "lucas@gmail.com", "123456789", "call 32 #4");
+$proveedor1 = new Proveedor("juridico", "Luis", "Bogota", "luis@gmail.com", "453634232", "call 55 #2");
 $producto1 = new Producto("computadores", 100.99, $proveedor1);
 
 //++++++++ejecucion+++++++++
